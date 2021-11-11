@@ -8,11 +8,14 @@
 
 
 
-# Blueprint for OOP # Use this instead of above
+# Blueprint for OOP # --Use this instead of above
+
+## CLASS is the thing
+## ATTRIBUTE - what it has
+## METHOD - what it can do
 
 class Pie: 
-
-    def __init__(self, name, topping, crust, price, size = 'personal'):
+        def __init__(self, name, topping, crust, price, size = 'personal'):
         self.name = name
         self.topping = topping
         self.crust = crust
@@ -47,3 +50,5 @@ print(pie_three.topping)
 
 # print(pie_two.size)
 # print(pie_two.topping)
+
+
