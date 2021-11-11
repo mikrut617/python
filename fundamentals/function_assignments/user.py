@@ -1,22 +1,47 @@
-class User: #Syntax for creating a class we want to call User
-    pass 
-
-# declare a class and give it name User
 class User:		
-    # Instance attributes are defined in a "magic method" called __init__, which is called when a new object is instantiated.
-    def __init__(self, name, email, account_balance, make_withdrawl, _display_user_balance):
-        # The first parameter of an instance method within a class will be self, and the instance attributes are also indicated by self..
-        self.name = "Michael"
-        self.email = "michael@codingdojo.com"
-        self.account_balance = 0
-        self.make_wtihdrawl = 0
-        self.display_user_balance = 0
 
-    def make_deposit(self, amount):	# takes an argument that is the amount of the deposit
-    	self.account_balance += amount
+    def __init__(self, name):
+        self.name = name
+        self.amount = 0
 
-michael = User("Michael Jordan", "mj@bulls.com")
-kobe = User("Kobe Bryant", "kb@lakers.com")
-shaq = User("Shaq", "shaq@tnt.com")
-print(michael.name)
-print(shaq.name)	    
+    def make_deposit(self, amount):
+        self.amount += amount
+
+    def make_withdrawl(self, amount):
+        self.amount -= amount
+
+    def display_user_balance(self):
+        print(f"User: {self.name}, Balance: {self.amount}")
+
+    def transfer_money(self, amount, user):
+        self.amount -= amount
+        user.amount += amount
+        self.display_user_balance()
+        user.display_user_balance()
+
+
+michael = User("Michael Jordan")
+kobe = User("Kobe Bryant")
+shaq = User("Shaq")
+# print(michael.name)
+# print(shaq.name)	    
+
+michael.make_deposit(1000000)
+michael.make_deposit(4534534)
+michael.make_deposit(98745873)
+michael.make_withdrawl(124234)
+michael.display_user_balance()
+
+kobe.make_deposit(56756)
+kobe.make_deposit(12343646776976)
+kobe.make_withdrawl(64756)
+kobe.make_withdrawl(6585345236563)
+kobe.display_user_balance()
+
+shaq.make_deposit(123456789)
+shaq.make_withdrawl(123)
+shaq.make_withdrawl(456)
+shaq.make_withdrawl(789)
+shaq.display_user_balance()
+
+michael.transfer_money(100, shaq)
