@@ -84,6 +84,7 @@ def print_info(dict):
 print_info(dojo)
 
 # # output:
+# -----------
 # 7 LOCATIONS
 # San Jose
 # Seattle
@@ -92,7 +93,7 @@ print_info(dojo)
 # Tulsa
 # DC
 # Burbank
-    
+# -----------
 # 8 INSTRUCTORS
 # Michael
 # Amy
