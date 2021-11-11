@@ -23,8 +23,7 @@ class User:
 michael = User("Michael Jordan")
 kobe = User("Kobe Bryant")
 shaq = User("Shaq")
-# print(michael.name)
-# print(shaq.name)	    
+
 
 michael.make_deposit(1000000)
 michael.make_deposit(4534534)
