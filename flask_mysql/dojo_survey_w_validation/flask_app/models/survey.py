@@ -17,9 +17,9 @@ class Survey:
         return connectToMySQL('dojo_survey_schema').query_db(query,data)
 
     @classmethod
-    def get_last_survey(cls):
+    def get_last_survey(cls, data):
         query = "SELECT * FROM dojos ORDER BY dojo_survey.id DESC LIMIT 1;"
-        results = connectToMySQL('dojo_survey_schema').query_db(query)
+        results = connectToMySQL('dojo_survey_schema').query_db(query, data)
         return Survey(results[0])
 
     @staticmethod
