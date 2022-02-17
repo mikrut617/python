@@ -7,7 +7,7 @@ class MySQLConnection:
         connection = pymysql.connect(host = 'localhost',
                                     user = 'root', 
                                     password = 'rootroot', 
-                                    db = 'login_reg',
+                                    db = 'recipes',
                                     charset = 'utf8mb4',
                                     cursorclass = pymysql.cursors.DictCursor,
                                     autocommit = True)
