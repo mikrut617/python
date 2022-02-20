@@ -1,7 +1,7 @@
 from flask_app import app
 
 from flask_app.controllers import users
-from flask_app.controllers import quote
+from flask_app.controllers import quotes
 
 
 if __name__=="__main__":
